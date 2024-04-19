@@ -1,13 +1,14 @@
 version: 2.1
 
 orbs:
-  android: circleci/android@2.5.0
+  android: circleci/android@2.4.0
 
 jobs:
   build-and-upload:
     executor:
       name: android/android-machine
-      tag: 202102-01
+      resource-class: large
+      tag: default
     environment:
       release_notes: "Test config CircleCi"
       notify: true
@@ -24,6 +25,6 @@ jobs:
             java -version
 
 workflows:
-  tesappio-release:
+  test-workflow:
     jobs:
       - build-and-upload
