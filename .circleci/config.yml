@@ -8,7 +8,7 @@ jobs:
     executor:
       name: android/android-machine
       resource-class: large
-      tag: 202102-01
+      tag: default
     environment:
       release_notes: "Test config CircleCi"
       notify: true
