@@ -7,6 +7,7 @@ jobs:
   build-and-upload:
     executor:
       name: android/android-machine
+      tag: 202102-01
     environment:
       release_notes: "Test config CircleCi"
       notify: true
